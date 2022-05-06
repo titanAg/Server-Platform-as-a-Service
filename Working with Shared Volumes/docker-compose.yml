@@ -1,0 +1,16 @@
+volumes:
+  my_volume:
+
+services:
+  webserver:
+    build: ./app1
+    ports:
+      - "80"
+    volumes:
+      - my_volume:/var/www/log
+  logserver:
+    build: ./app2
+    ports:
+      - "80"
+    volumes:
+      - my_volume:/var/www/log

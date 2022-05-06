@@ -1,0 +1,1 @@
+*/5 * * * * su postgres -p -c 'python3 /var/www/scheduledjob.py >> /var/www/cronlog'
